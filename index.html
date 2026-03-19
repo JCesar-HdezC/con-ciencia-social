@@ -170,8 +170,47 @@
     <h2 class="contacto-title">¿Tienes un proyecto<br/>en mente? <em>Hablemos.</em></h2>
     <p class="contacto-sub">Diagnóstico, intervención, evaluación — o simplemente una primera conversación para entender si hay algo en lo que pueda ayudarte.</p>
     <div class="contacto-actions">
-      <a href="mailto:contacto@con-cienciasocial.mx" class="btn-light">Escríbeme</a>
-      <a href="#" class="btn-outline-light">Agendar una llamada</a>
+      <button class="btn-light" id="btn-escribeme">Escríbeme</button>
+    </div>
+    <div class="contacto-form-wrap" id="contacto-form-wrap">
+      <form class="contacto-form" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="993f59b2-a54e-4933-bece-a0dcd0afa4e4"/>
+        <input type="checkbox" name="botcheck" style="display:none"/>
+        <div class="form-row">
+          <input class="form-input" type="text" name="name" placeholder="Nombre" required/>
+          <input class="form-input" type="email" name="email" placeholder="Correo electrónico" required/>
+        </div>
+        <div class="form-phone-row">
+          <select class="form-input form-select" id="phone-prefix">
+            <option value="+52" selected>MX +52</option>
+            <option value="+1">US +1</option>
+            <option value="+34">ES +34</option>
+            <option value="+54">AR +54</option>
+            <option value="+57">CO +57</option>
+            <option value="+56">CL +56</option>
+            <option value="+51">PE +51</option>
+            <option value="+58">VE +58</option>
+            <option value="+593">EC +593</option>
+            <option value="+502">GT +502</option>
+            <option value="+503">SV +503</option>
+            <option value="+504">HN +504</option>
+            <option value="+505">NI +505</option>
+            <option value="+506">CR +506</option>
+            <option value="+507">PA +507</option>
+            <option value="+591">BO +591</option>
+            <option value="+595">PY +595</option>
+            <option value="+598">UY +598</option>
+            <option value="+53">CU +53</option>
+            <option value="+44">GB +44</option>
+          </select>
+          <input class="form-input form-phone" type="tel" id="phone-number" placeholder="WhatsApp" maxlength="15" pattern="\d{2} \d{4} \d{4}" title="Ingresa 10 dígitos"/>
+        </div>
+        <textarea class="form-input form-textarea" name="message" placeholder="Cuéntame sobre tu proyecto..." required></textarea>
+        <div class="form-footer">
+          <button type="button" class="btn-cancel" id="btn-cancelar">Cancelar</button>
+          <button type="submit" class="btn-submit">Enviar mensaje</button>
+        </div>
+      </form>
     </div>
   </section>
 
